@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a5a5498-228c-4881-934a-fc3ba4dbe546" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/testfile.txt" afterDir="false" />
+    <list default="true" id="7a5a5498-228c-4881-934a-fc3ba4dbe546" name="Default Changelist" comment="Adding a text file and changing the app to open it, read it, and print the first line of it.">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dinner Seating - Student List 2018-19 4.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hello.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testfile.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +35,13 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
-  <component name="RunManager" selected="Python.hello">
-    <configuration name="hello" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Formal_Dinner_Assigner">
+    <configuration name="Formal_Dinner_Assigner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hello_world" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -46,7 +53,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hello.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Formal_Dinner_Assigner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Hello_world" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -76,9 +104,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="scratch_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Hello_world" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.hello" />
+        <item itemvalue="Python.Formal_Dinner_Assigner" />
+        <item itemvalue="Python.scratch" />
+        <item itemvalue="Python.scratch_3" />
         <item itemvalue="Python.scratch_1" />
       </list>
     </recent_temporary>
@@ -113,7 +164,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579564998879</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding a text file and changing the app to open it, read it, and print the first line of it.">
+      <created>1579654591600</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579654591600</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Now reading one more line of the text file">
+      <created>1579655409915</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579655409915</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,7 +196,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Adding a text file and changing the app to open it, read it, and print the first line of it." />
+    <MESSAGE value="Now reading one more line of the text file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now reading one more line of the text file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="78" key="#Notifications" timestamp="1579564947496">
@@ -142,10 +209,22 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="104" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1579558046867" />
-    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1579564997787">
+    <state x="368" y="248" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579746260822">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1579564997787" />
+    <state x="368" y="248" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1579746260822" />
+    <state x="728" y="183" key="#xdebugger.evaluate" timestamp="1579740303461">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="728" y="183" key="#xdebugger.evaluate/0.23.1280.777@0.23.1280.777" timestamp="1579740303461" />
+    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1579655409629">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1579655409629" />
+    <state width="771" height="438" key="DebuggerActiveHint" timestamp="1579741412934">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="771" height="438" key="DebuggerActiveHint/0.23.1280.777@0.23.1280.777" timestamp="1579741412934" />
     <state x="110" y="143" width="1060" height="537" key="DiffContextDialog" timestamp="1579565306747">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -158,33 +237,71 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="378" y="126" key="Github.UntrackedFilesDialog/0.23.1280.777@0.23.1280.777" timestamp="1579564882893" />
-    <state width="1239" height="191" key="GridCell.Tab.0.bottom" timestamp="1579654510917">
+    <state width="1239" height="308" key="GridCell.Tab.0.bottom" timestamp="1579756816127">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="191" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1579654510917" />
-    <state width="1239" height="191" key="GridCell.Tab.0.center" timestamp="1579654510916">
+    <state width="1239" height="308" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1579756816127" />
+    <state width="1239" height="308" key="GridCell.Tab.0.center" timestamp="1579756816127">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="191" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1579654510916" />
-    <state width="1239" height="191" key="GridCell.Tab.0.left" timestamp="1579654510915">
+    <state width="1239" height="308" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1579756816127" />
+    <state width="1239" height="308" key="GridCell.Tab.0.left" timestamp="1579756816126">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="191" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1579654510915" />
-    <state width="1239" height="191" key="GridCell.Tab.0.right" timestamp="1579654510916">
+    <state width="1239" height="308" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1579756816126" />
+    <state width="1239" height="308" key="GridCell.Tab.0.right" timestamp="1579756816127">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="191" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1579654510916" />
+    <state width="1239" height="308" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1579756816127" />
+    <state width="1239" height="308" key="GridCell.Tab.1.bottom" timestamp="1579756816129">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1239" height="308" key="GridCell.Tab.1.bottom/0.23.1280.777@0.23.1280.777" timestamp="1579756816129" />
+    <state width="1239" height="308" key="GridCell.Tab.1.center" timestamp="1579756816128">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1239" height="308" key="GridCell.Tab.1.center/0.23.1280.777@0.23.1280.777" timestamp="1579756816128" />
+    <state width="1239" height="308" key="GridCell.Tab.1.left" timestamp="1579756816128">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1239" height="308" key="GridCell.Tab.1.left/0.23.1280.777@0.23.1280.777" timestamp="1579756816128" />
+    <state width="1239" height="308" key="GridCell.Tab.1.right" timestamp="1579756816128">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1239" height="308" key="GridCell.Tab.1.right/0.23.1280.777@0.23.1280.777" timestamp="1579756816128" />
     <state x="149" y="78" key="SettingsEditor" timestamp="1579564816813">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="149" y="78" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1579564816813" />
-    <state x="240" y="153" key="Vcs.Push.Dialog.v2" timestamp="1579565371792">
+    <state x="240" y="153" key="Vcs.Push.Dialog.v2" timestamp="1579655449826">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="240" y="153" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1579565371792" />
-    <state x="284" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1579650648657">
+    <state x="240" y="153" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1579655449826" />
+    <state x="284" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1579735125599">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="284" y="237" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1579650648657" />
+    <state x="284" y="237" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1579735125599" />
+    <state x="295" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1579746215335">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="295" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1579746215335" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hello.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
