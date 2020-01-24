@@ -183,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579757117558</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Last set of changes before making the switch to purely object oriented approach">
+      <created>1579833288052</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579833288052</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,7 +211,8 @@
     <MESSAGE value="Adding a text file and changing the app to open it, read it, and print the first line of it." />
     <MESSAGE value="Now reading one more line of the text file" />
     <MESSAGE value="Assigns tables, waitstaff and kitchen crew" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assigns tables, waitstaff and kitchen crew" />
+    <MESSAGE value="Last set of changes before making the switch to purely object oriented approach" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last set of changes before making the switch to purely object oriented approach" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="78" key="#Notifications" timestamp="1579564947496">
@@ -219,18 +227,18 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="368" y="248" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1579746260822" />
-    <state x="728" y="183" key="#xdebugger.evaluate" timestamp="1579814819600">
+    <state x="763" y="188" key="#xdebugger.evaluate" timestamp="1579885667459">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="728" y="183" key="#xdebugger.evaluate/0.23.1280.777@0.23.1280.777" timestamp="1579814819600" />
-    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1579757117201">
+    <state x="763" y="188" key="#xdebugger.evaluate/0.23.1280.777@0.23.1280.777" timestamp="1579885667459" />
+    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1579833287732">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1579757117201" />
-    <state width="771" height="438" key="DebuggerActiveHint" timestamp="1579814623287">
+    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1579833287732" />
+    <state width="771" height="438" key="DebuggerActiveHint" timestamp="1579885581319">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="771" height="438" key="DebuggerActiveHint/0.23.1280.777@0.23.1280.777" timestamp="1579814623287" />
+    <state width="771" height="438" key="DebuggerActiveHint/0.23.1280.777@0.23.1280.777" timestamp="1579885581319" />
     <state x="110" y="143" width="1060" height="537" key="DiffContextDialog" timestamp="1579565306747">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -243,38 +251,38 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="378" y="126" key="Github.UntrackedFilesDialog/0.23.1280.777@0.23.1280.777" timestamp="1579564882893" />
-    <state width="1239" height="97" key="GridCell.Tab.0.bottom" timestamp="1579833236913">
+    <state width="1239" height="77" key="GridCell.Tab.0.bottom" timestamp="1579891418741">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="97" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1579833236913" />
-    <state width="1239" height="97" key="GridCell.Tab.0.center" timestamp="1579833236912">
+    <state width="1239" height="77" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1579891418741" />
+    <state width="1239" height="77" key="GridCell.Tab.0.center" timestamp="1579891418741">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="97" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1579833236912" />
-    <state width="1239" height="97" key="GridCell.Tab.0.left" timestamp="1579833236911">
+    <state width="1239" height="77" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1579891418741" />
+    <state width="1239" height="77" key="GridCell.Tab.0.left" timestamp="1579891418740">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="97" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1579833236911" />
-    <state width="1239" height="97" key="GridCell.Tab.0.right" timestamp="1579833236912">
+    <state width="1239" height="77" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1579891418740" />
+    <state width="1239" height="77" key="GridCell.Tab.0.right" timestamp="1579891418741">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="97" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1579833236912" />
-    <state width="1239" height="187" key="GridCell.Tab.1.bottom" timestamp="1579832596799">
+    <state width="1239" height="77" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1579891418741" />
+    <state width="1239" height="201" key="GridCell.Tab.1.bottom" timestamp="1579885827695">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="187" key="GridCell.Tab.1.bottom/0.23.1280.777@0.23.1280.777" timestamp="1579832596799" />
-    <state width="1239" height="187" key="GridCell.Tab.1.center" timestamp="1579832596798">
+    <state width="1239" height="201" key="GridCell.Tab.1.bottom/0.23.1280.777@0.23.1280.777" timestamp="1579885827695" />
+    <state width="1239" height="201" key="GridCell.Tab.1.center" timestamp="1579885827695">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="187" key="GridCell.Tab.1.center/0.23.1280.777@0.23.1280.777" timestamp="1579832596798" />
-    <state width="1239" height="187" key="GridCell.Tab.1.left" timestamp="1579832596798">
+    <state width="1239" height="201" key="GridCell.Tab.1.center/0.23.1280.777@0.23.1280.777" timestamp="1579885827695" />
+    <state width="1239" height="201" key="GridCell.Tab.1.left" timestamp="1579885827694">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="187" key="GridCell.Tab.1.left/0.23.1280.777@0.23.1280.777" timestamp="1579832596798" />
-    <state width="1239" height="187" key="GridCell.Tab.1.right" timestamp="1579832596799">
+    <state width="1239" height="201" key="GridCell.Tab.1.left/0.23.1280.777@0.23.1280.777" timestamp="1579885827694" />
+    <state width="1239" height="201" key="GridCell.Tab.1.right" timestamp="1579885827695">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="187" key="GridCell.Tab.1.right/0.23.1280.777@0.23.1280.777" timestamp="1579832596799" />
+    <state width="1239" height="201" key="GridCell.Tab.1.right/0.23.1280.777@0.23.1280.777" timestamp="1579885827695" />
     <state x="149" y="78" key="SettingsEditor" timestamp="1579564816813">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -283,6 +291,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="240" y="153" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1579757146789" />
+    <state x="334" y="227" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1579842794454">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="334" y="227" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.23.1280.777@0.23.1280.777" timestamp="1579842794454" />
     <state x="284" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1579812610227">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -298,18 +310,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Formal_Dinner_Assigner.py</url>
-          <line>101</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Formal_Dinner_Assigner.py</url>
-          <line>104</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
