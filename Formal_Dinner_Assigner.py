@@ -1,11 +1,14 @@
 import random
 import math
+import sys
 
 ####################
 # GLOBAL CONSTANTS #
 ####################
 
 OUTPUTFILE = "Dinner Assignments.csv"
+
+WORK_TYPES = ("Kitchen_crew", "Waiter", "Diner")
 
 #number of students that won't be sitting at a table or waiting on a table b/c they will be in the kitchen
 NUMBER_IN_KITCHEN_STAFF = 8
@@ -30,36 +33,20 @@ class Waiter:
         parent.table_number = table_number
         self.all.append(self)
 
-    @classmethod
-    def get_wait_staff(cls, potentials, number_needed):
-        i = 1
-        while i <= number_needed:
-            available_pool = len(potentials)
-            # choose a number at random from a set equal to the indecises of the list of available students
-            rand = random.randint(0, (available_pool - 1))
-            Waiter(potentials[rand], i)
-            del potentials[rand]
-            i += 1
+    def __str__(self):
+        return "%s, %s, W%s" % (self.super.lname, self.super.fname, self.super.table_number)
 
 class Kitchen_crew:
     all = []
 
-    def __init__(self, parent):
+    def __init__(self, parent, number):
         self.super = parent
         parent.assigned = True
         parent.type_of_assignment = "Kitchen_crew"
         self.all.append(self)
 
-    @classmethod
-    def get_kitchen_staff(cls, potentials, number_needed):
-        i = 1
-        while i <= number_needed:
-            available_pool = len(potentials)
-            # choose a number at random from a set equal to the indecises of the list of available students
-            rand = random.randint(0, (available_pool - 1))
-            Kitchen_crew(potentials[rand])
-            del potentials[rand]  #remove this student so that we don't double assign him to this task
-            i += 1
+    def __str__(self):
+        return "%s, %s, Kitchen" % (self.super.lname, self.super.fname)
 
 class Diner:
     all = []
@@ -71,6 +58,9 @@ class Diner:
         parent.type_of_assignment = "Diner"
         self.all.append(self)
 
+    def __str__(self):
+        return "%s, %s, %s" % (self.super.lname, self.super.fname, self.super.table_number)
+
 class Student:
     all = []
 
@@ -80,20 +70,14 @@ class Student:
         self.all.append(self)
         self.assigned = False
 
-    @classmethod
-    def write_all_students(cls, file):
-        f = open(file, "w", newline="")
-        for student in cls.all:
-            s = student.lname + "," + student.fname + ","
-            if student.type_of_assignment == "Kitchen_crew":  # student has kitchen duty so is not assigned a table
-                f.write(s + "kitchen\n")
-            else:
-                if student.type_of_assignment == "Waiter":  # student is the waiter for a specific table
-                    s += "W {}\n"
-                else:  # student is a diner
-                    s += "{}\n"
-                f.write(s.format(student.table_number))
-        f.close()
+    def __str__(self):
+        if self.type_of_assignment == "Kitchen_crew":
+            last_s = "Kitchen"
+        elif self.type_of_assignment == "Waiter":
+            last_s = "W %s" % (self.table_number)
+        else:
+            last_s = "%s" % (self.table_number)
+        return "%s, %s, %s\n" % (self.lname, self.fname, last_s)
 
 class Table:
     all = []
@@ -109,23 +93,6 @@ class Table:
         diner.table = self
         if len(self.diners) == number_needed:
             self.full = True
-
-    @classmethod
-    def fill_out_table(cls, potentials, table_number, number_needed):
-        i = 1
-        while i <= number_needed and len(potentials) > 0:
-            available_pool = len(potentials)
-            # choose a number at random from a set equal to the indecises of the list of available students
-            rand = random.randint(0, (available_pool - 1))
-            table_sitter = Diner(potentials[rand], table_number)
-            #add this diner to this table
-            if i == 1:  # this is the first diner for this table, so create a new Table object
-                Table(table_number, table_sitter)
-            else:  # we have already created this table, so just add diner to existing table
-                Table.all[table_number - 1].add_diner(table_sitter, number_needed)
-
-            del potentials[rand]  #remove this student so that we don't double assign him to this table
-            i += 1
 
 #############################
 # local function defintions #
@@ -143,11 +110,51 @@ def read_students_file(file_name):
         student_attributes = line.split(",")
         Student(lname=student_attributes[0], fname=student_attributes[1])
 
+#function to write all students to a given output file using the format set-up for printing Students in the object definition
+def write_all_of_a_class(cls, file):
+    f = open(file, "w", newline="")
+    for obj in cls.all:
+        f.write(str(obj))
+    f.close()
+
+#function to get a class name given a string consisting of that class name
+def str_to_class(classname):
+    return globals()[classname]
+
 #function to determine how many tables needed for the dinner given that tables hold a max of 8 people plus one waiter
 #and also given that we'll need a certain number of students for kitchen staff
 def calc_number_of_tables_needed():
 
     return math.ceil((len(Student.all) - NUMBER_IN_KITCHEN_STAFF) / (MAX_NUMBER_SITTING_AT_A_TABLE + NUMBER_OF_WAITERS_AT_A_TABLE))
+
+def assign_work(*params): # work_type, work_force, number_needed, maybe table_number
+    work_type = params[0]
+    work_force = params[1]
+    number_needed = params[2]
+    unassigned = list(filter(lambda obj: obj.assigned == False, work_force))
+
+    i = 1
+    while i <= number_needed and len(unassigned) > 0:
+        available_pool = len(unassigned)
+        # choose a number at random from a set equal to the indecises of the list of available students
+        rand = random.randint(0, (available_pool - 1))
+        assignee = unassigned.pop(rand)
+
+        #get the correct Class type using a string that matches the Class name
+        cls = str_to_class(work_type)
+
+        #assigning diners to tables is a special case because we need to create a Table object for the first diner, but
+        #after that we only need to add the diner to the existing table
+        if work_type != "Diner":
+            cls(assignee, i)
+        else:
+            table_number = params[3]
+            diner = Diner(assignee, table_number)
+            if i == 1:  # this is the first diner for this table, so create a new Table object
+                Table(table_number, diner)
+            else:  # we have already created this table, so just add diner to existing table
+                Table.all[table_number - 1].add_diner(diner, number_needed)
+        i += 1
 
 #################
 # Main Body     #
@@ -160,20 +167,13 @@ read_students_file("sample_data.csv")
 #of people that we need to seat for dinner
 number_of_tables_needed = calc_number_of_tables_needed()
 
-#keep track of all students that haven't already been assigned a task/dining table
-unassigned = Student.all.copy()
+#I'm relying on a constant to pass the name of the work-types because they need to match my Class names for that work-type
+assign_work(WORK_TYPES[0], Student.all, NUMBER_IN_KITCHEN_STAFF)
+assign_work(WORK_TYPES[1], Student.all, number_of_tables_needed * NUMBER_OF_WAITERS_AT_A_TABLE)
 
-#create waiters for all of the tables
-Waiter.get_wait_staff(unassigned, number_of_tables_needed)
-unassigned = list(filter(lambda student: student.assigned == False, unassigned))
-
-#create kitchen crew from all students except those who are already assigned to wait tables
-Kitchen_crew.get_kitchen_staff(unassigned, NUMBER_IN_KITCHEN_STAFF)
-unassigned = list(filter(lambda student: student.assigned == False, unassigned))
-
-#assign tables for all remaining students
+#assign tables to the non-workers,
 for x in range(number_of_tables_needed):
-    Table.fill_out_table(unassigned, x + 1, MAX_NUMBER_SITTING_AT_A_TABLE)
+    assign_work(WORK_TYPES[2], Student.all, MAX_NUMBER_SITTING_AT_A_TABLE, x)
 
 #print status of each student to an output file
-Student.write_all_students(OUTPUTFILE)
+write_all_of_a_class(Student, OUTPUTFILE)
