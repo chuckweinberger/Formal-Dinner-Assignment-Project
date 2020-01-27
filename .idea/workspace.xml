@@ -197,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579891449436</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="removed classmethods that were really better off as functions">
+      <created>1579922002694</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579922002694</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,7 +227,8 @@
     <MESSAGE value="Assigns tables, waitstaff and kitchen crew" />
     <MESSAGE value="Last set of changes before making the switch to purely object oriented approach" />
     <MESSAGE value="First draft using a more oo approach" />
-    <option name="LAST_COMMIT_MESSAGE" value="First draft using a more oo approach" />
+    <MESSAGE value="removed classmethods that were really better off as functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed classmethods that were really better off as functions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="78" key="#Notifications" timestamp="1579564947496">
@@ -235,18 +243,18 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="368" y="248" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1579746260822" />
-    <state x="763" y="188" key="#xdebugger.evaluate" timestamp="1579919303912">
+    <state x="763" y="188" key="#xdebugger.evaluate" timestamp="1580092082923">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="763" y="188" key="#xdebugger.evaluate/0.23.1280.777@0.23.1280.777" timestamp="1579919303912" />
-    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1579891449130">
+    <state x="763" y="188" key="#xdebugger.evaluate/0.23.1280.777@0.23.1280.777" timestamp="1580092082923" />
+    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1579922002109">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1579891449130" />
-    <state width="771" height="438" key="DebuggerActiveHint" timestamp="1579921504275">
+    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1579922002109" />
+    <state width="811" height="438" key="DebuggerActiveHint" timestamp="1580093533928">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="771" height="438" key="DebuggerActiveHint/0.23.1280.777@0.23.1280.777" timestamp="1579921504275" />
+    <state width="811" height="438" key="DebuggerActiveHint/0.23.1280.777@0.23.1280.777" timestamp="1580093533928" />
     <state x="110" y="143" width="1060" height="537" key="DiffContextDialog" timestamp="1579565306747">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -259,46 +267,50 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="378" y="126" key="Github.UntrackedFilesDialog/0.23.1280.777@0.23.1280.777" timestamp="1579564882893" />
-    <state width="1239" height="282" key="GridCell.Tab.0.bottom" timestamp="1579921816272">
+    <state width="1191" height="256" key="GridCell.Tab.0.bottom" timestamp="1580094137432">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="282" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1579921816272" />
-    <state width="1239" height="282" key="GridCell.Tab.0.center" timestamp="1579921816267">
+    <state width="1191" height="256" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1580094137432" />
+    <state width="1191" height="256" key="GridCell.Tab.0.center" timestamp="1580094137431">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="282" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1579921816267" />
-    <state width="1239" height="282" key="GridCell.Tab.0.left" timestamp="1579921816264">
+    <state width="1191" height="256" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1580094137431" />
+    <state width="1191" height="256" key="GridCell.Tab.0.left" timestamp="1580094137431">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="282" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1579921816264" />
-    <state width="1239" height="282" key="GridCell.Tab.0.right" timestamp="1579921816271">
+    <state width="1191" height="256" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1580094137431" />
+    <state width="1191" height="256" key="GridCell.Tab.0.right" timestamp="1580094137432">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="282" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1579921816271" />
-    <state width="1239" height="287" key="GridCell.Tab.1.bottom" timestamp="1579921740869">
+    <state width="1191" height="256" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1580094137432" />
+    <state width="1191" height="256" key="GridCell.Tab.1.bottom" timestamp="1580094137337">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="287" key="GridCell.Tab.1.bottom/0.23.1280.777@0.23.1280.777" timestamp="1579921740869" />
-    <state width="1239" height="287" key="GridCell.Tab.1.center" timestamp="1579921740868">
+    <state width="1191" height="256" key="GridCell.Tab.1.bottom/0.23.1280.777@0.23.1280.777" timestamp="1580094137337" />
+    <state width="1191" height="256" key="GridCell.Tab.1.center" timestamp="1580094137337">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="287" key="GridCell.Tab.1.center/0.23.1280.777@0.23.1280.777" timestamp="1579921740868" />
-    <state width="1239" height="287" key="GridCell.Tab.1.left" timestamp="1579921740867">
+    <state width="1191" height="256" key="GridCell.Tab.1.center/0.23.1280.777@0.23.1280.777" timestamp="1580094137337" />
+    <state width="1191" height="256" key="GridCell.Tab.1.left" timestamp="1580094137337">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="287" key="GridCell.Tab.1.left/0.23.1280.777@0.23.1280.777" timestamp="1579921740867" />
-    <state width="1239" height="287" key="GridCell.Tab.1.right" timestamp="1579921740868">
+    <state width="1191" height="256" key="GridCell.Tab.1.left/0.23.1280.777@0.23.1280.777" timestamp="1580094137337" />
+    <state width="1191" height="256" key="GridCell.Tab.1.right" timestamp="1580094137337">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1239" height="287" key="GridCell.Tab.1.right/0.23.1280.777@0.23.1280.777" timestamp="1579921740868" />
+    <state width="1191" height="256" key="GridCell.Tab.1.right/0.23.1280.777@0.23.1280.777" timestamp="1580094137337" />
     <state x="149" y="78" key="SettingsEditor" timestamp="1579564816813">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="149" y="78" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1579564816813" />
-    <state x="240" y="153" key="Vcs.Push.Dialog.v2" timestamp="1579891464133">
+    <state x="240" y="153" key="Vcs.Push.Dialog.v2" timestamp="1579922015205">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="240" y="153" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1579891464133" />
+    <state x="240" y="153" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1579922015205" />
+    <state width="630" height="388" key="XDebugger.FullValuePopup" timestamp="1579981422677">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="630" height="388" key="XDebugger.FullValuePopup/0.23.1280.777@0.23.1280.777" timestamp="1579981422677" />
     <state x="334" y="227" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1579842794454">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -307,10 +319,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="284" y="237" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1579895240299" />
-    <state x="413" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579921972084">
+    <state x="413" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580094723606">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="413" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1579921972084" />
+    <state x="413" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1580094723606" />
     <state x="295" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1579746215335">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -326,5 +338,15 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="Table.all" language="Python" />
+        <watch expression="needing_a_table" language="Python" />
+        <watch expression="Student.all" language="Python" />
+        <watch expression="Diner.all" language="Python" />
+        <watch expression="Waiter.all" language="Python" />
+        <watch expression="Kitchen_crew.all" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
