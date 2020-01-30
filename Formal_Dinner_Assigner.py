@@ -206,8 +206,7 @@ def assign_work(work_type, work_force, number_needed):
 
         worker = cls(assignee, i) #create the correct type of worker object
         if work_type == "Waiter": #if the worker is a waiter add them to the correct table_number
-            table = worker.table = Table(i, worker, type_of_assignment="Waiter")
-            # table.add_waiter(worker)
+            worker.table = Table(i, worker, type_of_assignment="Waiter")
 
         i += 1
 
