@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7a5a5498-228c-4881-934a-fc3ba4dbe546" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server" beforeDir="false" afterPath="$PROJECT_DIR$/Server" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +253,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581654216694</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix bug in parsing query parameters">
+      <created>1581657579432</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1581657579432</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fix bug in parsing query parameters">
+      <created>1581657947563</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1581657947563</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -282,7 +295,8 @@
     <MESSAGE value="Implemented blacklist feature so no two attendants sit with any of the same diners for two dinners in a row" />
     <MESSAGE value="Corrected a typo" />
     <MESSAGE value="Server code now serves up json of Tables, Kitchen_crew and Waiters.  Distinguishes between conveying existing data and requests for a new shuffle.  Change assigner code so that it can provide existing info as opposed to shuffling the data before providing the data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Server code now serves up json of Tables, Kitchen_crew and Waiters.  Distinguishes between conveying existing data and requests for a new shuffle.  Change assigner code so that it can provide existing info as opposed to shuffling the data before providing the data." />
+    <MESSAGE value="Fix bug in parsing query parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bug in parsing query parameters" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="78" key="#Notifications" timestamp="1579564947496">
@@ -305,10 +319,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="666" y="85" key="#xdebugger.evaluate/0.23.1280.777@0.23.1280.777" timestamp="1581649493882" />
-    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1581654216416">
+    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1581657947352">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1581654216416" />
+    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1581657947352" />
     <state width="983" height="438" key="DebuggerActiveHint" timestamp="1581655814274">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -325,22 +339,22 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="378" y="126" key="Github.UntrackedFilesDialog/0.23.1280.777@0.23.1280.777" timestamp="1579564882893" />
-    <state width="1190" height="194" key="GridCell.Tab.0.bottom" timestamp="1581657546758">
+    <state width="1190" height="194" key="GridCell.Tab.0.bottom" timestamp="1581658308243">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1190" height="194" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1581657546758" />
-    <state width="1190" height="194" key="GridCell.Tab.0.center" timestamp="1581657546757">
+    <state width="1190" height="194" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1581658308243" />
+    <state width="1190" height="194" key="GridCell.Tab.0.center" timestamp="1581658308242">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1190" height="194" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1581657546757" />
-    <state width="1190" height="194" key="GridCell.Tab.0.left" timestamp="1581657546757">
+    <state width="1190" height="194" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1581658308242" />
+    <state width="1190" height="194" key="GridCell.Tab.0.left" timestamp="1581658308242">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1190" height="194" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1581657546757" />
-    <state width="1190" height="194" key="GridCell.Tab.0.right" timestamp="1581657546758">
+    <state width="1190" height="194" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1581658308242" />
+    <state width="1190" height="194" key="GridCell.Tab.0.right" timestamp="1581658308242">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1190" height="194" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1581657546758" />
+    <state width="1190" height="194" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1581658308242" />
     <state width="1190" height="240" key="GridCell.Tab.1.bottom" timestamp="1581657374898">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -361,10 +375,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="149" y="78" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1579564816813" />
-    <state x="240" y="153" key="Vcs.Push.Dialog.v2" timestamp="1581654268894">
+    <state x="240" y="153" key="Vcs.Push.Dialog.v2" timestamp="1581657962164">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="240" y="153" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1581654268894" />
+    <state x="240" y="153" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1581657962164" />
     <state width="630" height="388" key="XDebugger.FullValuePopup" timestamp="1579981422677">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
