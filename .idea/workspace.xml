@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a5a5498-228c-4881-934a-fc3ba4dbe546" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Formal_Dinner_Assigner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Formal_Dinner_Assigner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server" beforeDir="false" afterPath="$PROJECT_DIR$/Server" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Formal_Dinner_Assigner">
+  <component name="RunManager" selected="Python.Server">
     <configuration name="Formal_Dinner_Assigner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hello_world" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -52,6 +52,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Formal_Dinner_Assigner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Hello_world" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Server" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -125,6 +146,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Server" />
         <item itemvalue="Python.Formal_Dinner_Assigner" />
         <item itemvalue="Python.scratch_1" />
         <item itemvalue="Python.scratch" />
@@ -211,7 +233,28 @@
       <option name="project" value="LOCAL" />
       <updated>1580094740316</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implemented blacklist feature so no two attendants sit with any of the same diners for two dinners in a row">
+      <created>1580346468791</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580346468791</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Corrected a typo">
+      <created>1580347015869</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580347015869</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Server code now serves up json of Tables, Kitchen_crew and Waiters.  Distinguishes between conveying existing data and requests for a new shuffle.  Change assigner code so that it can provide existing info as opposed to shuffling the data before providing the data.">
+      <created>1581654216694</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1581654216694</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,7 +279,10 @@
     <MESSAGE value="First draft using a more oo approach" />
     <MESSAGE value="removed classmethods that were really better off as functions" />
     <MESSAGE value="Starting to develop object inheritance a little better" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting to develop object inheritance a little better" />
+    <MESSAGE value="Implemented blacklist feature so no two attendants sit with any of the same diners for two dinners in a row" />
+    <MESSAGE value="Corrected a typo" />
+    <MESSAGE value="Server code now serves up json of Tables, Kitchen_crew and Waiters.  Distinguishes between conveying existing data and requests for a new shuffle.  Change assigner code so that it can provide existing info as opposed to shuffling the data before providing the data." />
+    <option name="LAST_COMMIT_MESSAGE" value="Server code now serves up json of Tables, Kitchen_crew and Waiters.  Distinguishes between conveying existing data and requests for a new shuffle.  Change assigner code so that it can provide existing info as opposed to shuffling the data before providing the data." />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="78" key="#Notifications" timestamp="1579564947496">
@@ -247,22 +293,26 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="104" y="75" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1579558046867" />
+    <state x="362" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581553203282">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="362" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.777@0.23.1280.777" timestamp="1581553203282" />
     <state x="368" y="248" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579746260822">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="368" y="248" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1579746260822" />
-    <state x="666" y="85" key="#xdebugger.evaluate" timestamp="1580341124135">
+    <state x="666" y="85" key="#xdebugger.evaluate" timestamp="1581649493882">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="666" y="85" key="#xdebugger.evaluate/0.23.1280.777@0.23.1280.777" timestamp="1580341124135" />
-    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1580094740049">
+    <state x="666" y="85" key="#xdebugger.evaluate/0.23.1280.777@0.23.1280.777" timestamp="1581649493882" />
+    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2" timestamp="1581654216416">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1580094740049" />
-    <state width="983" height="438" key="DebuggerActiveHint" timestamp="1580341209231">
+    <state x="49" y="23" width="816" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1581654216416" />
+    <state width="983" height="438" key="DebuggerActiveHint" timestamp="1581655814274">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="983" height="438" key="DebuggerActiveHint/0.23.1280.777@0.23.1280.777" timestamp="1580341209231" />
+    <state width="983" height="438" key="DebuggerActiveHint/0.23.1280.777@0.23.1280.777" timestamp="1581655814274" />
     <state x="110" y="143" width="1060" height="537" key="DiffContextDialog" timestamp="1579565306747">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -275,46 +325,46 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="378" y="126" key="Github.UntrackedFilesDialog/0.23.1280.777@0.23.1280.777" timestamp="1579564882893" />
-    <state width="1191" height="305" key="GridCell.Tab.0.bottom" timestamp="1580346302043">
+    <state width="1190" height="194" key="GridCell.Tab.0.bottom" timestamp="1581657546758">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1191" height="305" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1580346302043" />
-    <state width="1191" height="305" key="GridCell.Tab.0.center" timestamp="1580346302042">
+    <state width="1190" height="194" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1581657546758" />
+    <state width="1190" height="194" key="GridCell.Tab.0.center" timestamp="1581657546757">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1191" height="305" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1580346302042" />
-    <state width="1191" height="305" key="GridCell.Tab.0.left" timestamp="1580346302042">
+    <state width="1190" height="194" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1581657546757" />
+    <state width="1190" height="194" key="GridCell.Tab.0.left" timestamp="1581657546757">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1191" height="305" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1580346302042" />
-    <state width="1191" height="305" key="GridCell.Tab.0.right" timestamp="1580346302042">
+    <state width="1190" height="194" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1581657546757" />
+    <state width="1190" height="194" key="GridCell.Tab.0.right" timestamp="1581657546758">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1191" height="305" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1580346302042" />
-    <state width="1191" height="174" key="GridCell.Tab.1.bottom" timestamp="1580346293027">
+    <state width="1190" height="194" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1581657546758" />
+    <state width="1190" height="240" key="GridCell.Tab.1.bottom" timestamp="1581657374898">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1191" height="174" key="GridCell.Tab.1.bottom/0.23.1280.777@0.23.1280.777" timestamp="1580346293027" />
-    <state width="1191" height="174" key="GridCell.Tab.1.center" timestamp="1580346293026">
+    <state width="1190" height="240" key="GridCell.Tab.1.bottom/0.23.1280.777@0.23.1280.777" timestamp="1581657374898" />
+    <state width="1190" height="240" key="GridCell.Tab.1.center" timestamp="1581657374897">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1191" height="174" key="GridCell.Tab.1.center/0.23.1280.777@0.23.1280.777" timestamp="1580346293026" />
-    <state width="1191" height="174" key="GridCell.Tab.1.left" timestamp="1580346293026">
+    <state width="1190" height="240" key="GridCell.Tab.1.center/0.23.1280.777@0.23.1280.777" timestamp="1581657374897" />
+    <state width="1190" height="240" key="GridCell.Tab.1.left" timestamp="1581657374897">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1191" height="174" key="GridCell.Tab.1.left/0.23.1280.777@0.23.1280.777" timestamp="1580346293026" />
-    <state width="1191" height="174" key="GridCell.Tab.1.right" timestamp="1580346293027">
+    <state width="1190" height="240" key="GridCell.Tab.1.left/0.23.1280.777@0.23.1280.777" timestamp="1581657374897" />
+    <state width="1190" height="240" key="GridCell.Tab.1.right" timestamp="1581657374898">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1191" height="174" key="GridCell.Tab.1.right/0.23.1280.777@0.23.1280.777" timestamp="1580346293027" />
+    <state width="1190" height="240" key="GridCell.Tab.1.right/0.23.1280.777@0.23.1280.777" timestamp="1581657374898" />
     <state x="149" y="78" key="SettingsEditor" timestamp="1579564816813">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="149" y="78" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1579564816813" />
-    <state x="240" y="153" key="Vcs.Push.Dialog.v2" timestamp="1580094748107">
+    <state x="240" y="153" key="Vcs.Push.Dialog.v2" timestamp="1581654268894">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="240" y="153" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1580094748107" />
+    <state x="240" y="153" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1581654268894" />
     <state width="630" height="388" key="XDebugger.FullValuePopup" timestamp="1579981422677">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -323,18 +373,18 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="334" y="227" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.23.1280.777@0.23.1280.777" timestamp="1579842794454" />
-    <state x="284" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1580268243341">
+    <state x="284" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1581553107875">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="284" y="237" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1580268243341" />
+    <state x="284" y="237" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1581553107875" />
     <state x="413" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580346433445">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="413" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1580346433445" />
-    <state x="241" y="160" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1580329473707">
+    <state x="241" y="160" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1581651048178">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="241" y="160" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1280.777@0.23.1280.777" timestamp="1580329473707" />
+    <state x="241" y="160" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1280.777@0.23.1280.777" timestamp="1581651048178" />
     <state x="295" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1579746215335">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
