@@ -57,10 +57,13 @@ class RequestHandler(BaseHTTPRequestHandler):
         print(f'\n<----- GET Request End -----\n')
 
         #parse query parameters
-        query = urlsplit(self.path).query
-        qp = parse_qs(query)
+        query_string = urlsplit(self.path).query
+        qp = parse_qs(query_string)
         params_dict= {k: v[0] for k, v in qp.items()}
-        reshuffle = params_dict["reshuffle"] == "true"
+        if ("reshuffle" in params_dict and params_dict["reshuffle"] == "true"):
+            reshuffle = True
+        else:
+            reshuffle = False
 
         #reshuffle the diners if requested in the GET
         if reshuffle:
