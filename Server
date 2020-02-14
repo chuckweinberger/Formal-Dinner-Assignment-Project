@@ -1,0 +1,86 @@
+import json
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from urllib.parse import urlsplit, parse_qs
+from Formal_Dinner_Assigner import get_diners, shuffle_diners
+
+def table_response(tables):
+
+    # turn a multi-line string in which each line contains data on an individual table
+    all_tables = []
+
+    for table in tables.values():
+
+        diners = []
+        waiters = []
+
+        for diner in table.diners:
+            diners.append({ 'first_name': diner.fname, 'last_name': diner.lname })
+
+        for waiter in table.waiters:
+            waiters.append({ 'first_name': waiter.super.fname, 'last_name': waiter.super.lname })
+
+        all_tables.append({ 'table_number': table.number, 'waiter': waiters, 'diners': diners })
+
+    return all_tables
+
+def waiter_response(waiters):
+
+    wait_staff = []
+
+    for waiter in waiters:
+
+        wait_staff.append(
+            {'first_name': waiter.super.fname, 'last_name': waiter.super.lname, 'table': waiter.table.number})
+
+    return wait_staff
+
+def kitchen_crew_response(kitchen_crew):
+
+    crew = []
+
+    for crew_member in kitchen_crew:
+        crew.append({'first_name': crew_member.super.fname, 'last_name': crew_member.super.lname})
+
+    return crew
+
+class RequestHandler(BaseHTTPRequestHandler):
+
+    def do_GET(self):
+        requestPath = self.path
+
+        #Log to us
+        print(f'\n----- GET Request Start ----->\n')
+        print(f'Request path: {requestPath}')
+        print(f'Request headers:\n')
+        for line in self.headers:
+            print(f'  > {line}: {self.headers[line]}')
+        print(f'\n<----- GET Request End -----\n')
+
+        #parse query parameters
+        query = urlsplit(self.path).query
+        qp = parse_qs(query)
+        params_dict= {k: v[0] for k, v in qp.items()}
+        reshuffle = params_dict["reshuffle"] == "true"
+
+        #reshuffle the diners if requested in the GET
+        if reshuffle:
+            tables, waiters, kitchen_crew, all_attendants = shuffle_diners()
+        else:
+            tables, waiters, kitchen_crew, all_attendants = get_diners()
+
+        #Answer 200 => OK Status
+        self.send_response(200)
+
+        #Add Headers if any needed
+        #self.send_header("Set-Cookie", "cate=true")
+        self.end_headers()
+
+        response = {' tables': table_response(tables), 'waiters': waiter_response(waiters), 'kitchen_crew': kitchen_crew_response(kitchen_crew) }
+        json_reply = json.dumps(response)
+        self.wfile.write(json_reply.encode(encoding='utf_8'))
+
+# Listen on Port 80
+port = 80
+print('Listening on localhost:%s' % port)
+server = HTTPServer(('', port), RequestHandler)
+server.serve_forever()

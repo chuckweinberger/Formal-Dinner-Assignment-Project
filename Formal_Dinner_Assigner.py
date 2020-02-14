@@ -5,8 +5,9 @@ import math
 # GLOBAL CONSTANTS #
 ####################
 
-INPUT_FILE = "Dinner Seating - Student List 2018-19 4.csv"
+# INPUT_FILE = "Dinner Assignments.csv"
 
+INPUT_FILE = "Dinner Seating - Student List 2018-19 4.csv"
 OUTPUT_FILE = "Dinner Assignments.csv"
 
 WORK_TYPES = ("Kitchen_crew", "Waiter", "Diner")
@@ -43,8 +44,21 @@ class Attendant():
 
         if last_weeks_assignment == "Kitchen":
             self.last_weeks_assignment = "Kitchen"
+            Kitchen_crew(self) #go ahead and create a Kitchen_crew object just in case the user wants to see current assignments as opposed to creating new assignments
         elif last_weeks_assignment[0] == "W":
-            self.last_weeks_assignment = "Waiter"
+            table = last_weeks_assignment.split()[1]
+            if table != "Alt": #ignore the case of having an alternative waiter
+                table_number = int(last_weeks_assignment.split()[1])
+                self.last_weeks_assignment = "Waiter"
+                waiter = Waiter(self, table_number)
+                if table_number in Table.all_tables.keys():
+                    lwt = Table.all_tables[table_number]
+                    lwt.add_waiter(waiter)
+                else:
+                    Table(table_number, waiter, "Waiter")
+            else:
+                self.last_weeks_assignment = "Alternate Waiter"
+
         else:
             self.last_weeks_assignment = "Diner"
 
@@ -56,7 +70,7 @@ class Attendant():
                 lwt = Table.all_tables[last_weeks_table_number]
                 lwt.add_diner(self)
             else:  #we haven't yet created this instance of Last_weeks_table.  So, create it
-                lwt = Table(last_weeks_table_number, self) #diner will be added to the list of diners at this table as part of the creation process
+                Table(last_weeks_table_number, self) #diner will be added to the list of diners at this table as part of the creation process
 
     def __str__(self):
         if self.type_of_assignment == "Kitchen_crew":
@@ -65,7 +79,7 @@ class Attendant():
             last_s = "W %s" % (self.waiter.table.number)
         else:
             last_s = "%s" % (self.table.number)
-        return "%s, %s, %s\n" % (self.lname, self.fname, last_s)
+        return "%s,%s,%s\n" % (self.lname, self.fname, last_s)
 
     #class method that traverses all instances of the class and creates a blacklist for each such instance.
     #the blacklist contains all of the diners with whom this instance ate with in the previous dinner so that we
@@ -76,32 +90,44 @@ class Attendant():
             if attendant.last_weeks_assignment == "Diner": #if  the attendant wasn't a diner last dinner then his blacklist should remain empty
                 attendant.blacklist = attendant.table.diners
 
+    @classmethod
+    def wipe_attendants(cls):
+        cls.all_attendants = []
+
 #Note, I really should set this up so that it inherits attributes from the Attendant class rather than just points to the parent
 class Waiter():
     all_waiters = []
 
     def __init__(self, parent, table_number):
         self.super = parent
-        parent.assigned = True
+        # parent.assigned = False
+        # parent.type_of_assignment = ""
         parent.waiter = self
-        parent.type_of_assignment = "Waiter"
         self.all_waiters.append(self)
 
     def __str__(self):
         return "%s, %s, W%s" % (self.super.lname, self.super.fname, self.table.number)
 
+    @classmethod
+    def wipe_waiters(cls):
+        cls.all_waiters = []
+
 #Note, I really should set this up so that it inherits attributes from the Attendant class rather than just points to the parent
 class Kitchen_crew():
     all_kitchen_crew = []
 
-    def __init__(self, parent, number):
+    def __init__(self, parent, number=0):
         self.super = parent
-        parent.assigned = True
-        parent.type_of_assignment = "Kitchen_crew"
+        parent.assigned = False
+        parent.type_of_assignment = ""
         self.all_kitchen_crew.append(self)
 
     def __str__(self):
         return "%s, %s, Kitchen" % (self.super.lname, self.super.fname)
+
+    @classmethod
+    def wipe_kitchen_crew(cls):
+        cls.all_kitchen_crew = []
 
 # class Diner(Attendant):
 #     all_diners = []
@@ -119,7 +145,7 @@ class Kitchen_crew():
 class Table:
     all_tables = {}
 
-    def __init__(self, number, diner, type_of_assignment = None):
+    def __init__(self, number, diner, type_of_assignment = "Diner"):
         self.diners = []
         self.waiters = []
         self.all_tables[number] = self
@@ -141,6 +167,10 @@ class Table:
         for attendant in Attendant.all_attendants:
             attendant.table = None
 
+    @classmethod
+    def wipe_tables(cls):
+        cls.all_tables = {}
+
     #override the Table.add_diner function so to record last week's Table instance instead of the current weeks Table instance in the diner instance
     def add_diner(self, diner):
         self.diners.append(diner)
@@ -159,6 +189,11 @@ def read_attendant_file(INPUT_FILE):
     f = open(INPUT_FILE)
     lines = (f.read())
     f.close()
+
+    Attendant.wipe_attendants()    #clear out all old assignments
+    Waiter.wipe_waiters()
+    Kitchen_crew.wipe_kitchen_crew()
+    Table.wipe_tables()
 
     # turn a multi-line string in which each line contains data on an individual student into Student objects
     for line in lines.splitlines():
@@ -205,6 +240,8 @@ def assign_work(work_type, work_force, number_needed):
         cls = str_to_class(work_type)
 
         worker = cls(assignee, i) #create the correct type of worker object
+        worker.super.assigned = True
+        worker.super.type_of_assignment = work_type
         if work_type == "Waiter": #if the worker is a waiter add them to the correct table_number
             worker.table = Table(i, worker, type_of_assignment="Waiter")
 
@@ -241,27 +278,38 @@ def assign_dinner_tables(number_of_tables_needed):
 #################
 # Main Body     #
 #################
+def get_diners():
 
-#read all students from a csv file and create a Student object for each one of them
-read_attendant_file(INPUT_FILE)
+    #read all students from a csv file and create a Student object for each one of them
+    read_attendant_file(INPUT_FILE)
 
-#for each attendant at last week's dinner create a blacklist containing all of the students with which that student ate last week
-Attendant.create_blacklists()
+    return(Table.all_tables, Waiter.all_waiters, Kitchen_crew.all_kitchen_crew, Attendant.all_attendants)
 
-#clear-out the list of all tables so that we can assign then anew for this coming week's diner
-Table.reset_all_table_list()
+def shuffle_diners():
 
-#determine how many tables we need given the capacity of each table and the total number
-#of people that we need to seat for dinner
-number_of_tables_needed = calc_number_of_tables_needed()
+    read_attendant_file(INPUT_FILE)
 
-#I'm relying on a constant to pass the name of the work-types because they need to match my Class names for that work-type.  See above
-#comment about it being easier to just implement nested if statements
-assign_work(WORK_TYPES[0], Attendant.all_attendants, NUMBER_IN_KITCHEN_STAFF)
-assign_work(WORK_TYPES[1], Attendant.all_attendants, number_of_tables_needed * NUMBER_OF_WAITERS_AT_A_TABLE)
+    #for each attendant at last week's dinner create a blacklist containing all of the students with which that student ate last week
+    Attendant.create_blacklists()
 
-#assign the non-workers to a dinner table
-assign_dinner_tables(number_of_tables_needed)
+    #clear-out the assignments from last week so that we can assign then anew for this coming week's diner
+    Table.reset_all_table_list()
+    Kitchen_crew.wipe_kitchen_crew()
+    Waiter.wipe_waiters()
 
-#print status of each student to an output file
-write_all_attendants(OUTPUT_FILE)
+    #determine how many tables we need given the capacity of each table and the total number
+    #of people that we need to seat for dinner
+    number_of_tables_needed = calc_number_of_tables_needed()
+
+    #I'm relying on a constant to pass the name of the work-types because they need to match my Class names for that work-type.  See above
+    #comment about it being easier to just implement nested if statements
+    assign_work(WORK_TYPES[0], Attendant.all_attendants, NUMBER_IN_KITCHEN_STAFF)
+    assign_work(WORK_TYPES[1], Attendant.all_attendants, number_of_tables_needed * NUMBER_OF_WAITERS_AT_A_TABLE)
+
+    #assign the non-workers to a dinner table
+    assign_dinner_tables(number_of_tables_needed)
+
+    #print status of each student to an output file
+    write_all_attendants(OUTPUT_FILE)
+
+    return(Table.all_tables, Waiter.all_waiters, Kitchen_crew.all_kitchen_crew, Attendant.all_attendants)
