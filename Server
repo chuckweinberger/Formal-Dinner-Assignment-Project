@@ -19,7 +19,7 @@ def table_response(tables):
         for waiter in table.waiters:
             waiters.append({ 'first_name': waiter.super.fname, 'last_name': waiter.super.lname })
 
-        all_tables.append({ 'table_number': table.number, 'waiter': waiters, 'diners': diners })
+        all_tables.append({ 'table_number': table.number, 'waiters': waiters, 'diners': diners })
 
     return all_tables
 
@@ -61,12 +61,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         qp = parse_qs(query_string)
         params_dict= {k: v[0] for k, v in qp.items()}
         if ("reshuffle" in params_dict and params_dict["reshuffle"] == "true"):
-            reshuffle = True
-        else:
-            reshuffle = False
-
-        #reshuffle the diners if requested in the GET
-        if reshuffle:
             tables, waiters, kitchen_crew, all_attendants = shuffle_diners()
         else:
             tables, waiters, kitchen_crew, all_attendants = get_diners()
